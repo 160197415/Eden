@@ -1,0 +1,38 @@
+/** Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+       #map {
+        height: 100%;
+      }
+
+      .brand {
+        /* position: absolute; */
+        left: 50%;
+        margin-left: -50px !important;
+        display: block;
+        background-color: aquamarine;
+    }
+
+      /** Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /**
+      * Container    */
+      #container {
+
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #map{
+          height: 50vh;
+          width: 40vw;
+          background-color: aliceblue;
+      }
