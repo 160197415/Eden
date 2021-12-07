@@ -1,10 +1,7 @@
 /** Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 
-       #map {
-        height: 100%;
-      }
-
+      
       .brand {
         /* position: absolute; */
         left: 50%;
@@ -16,6 +13,7 @@
       /** Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
+        width: 100%;
         margin: 0;
         padding: 0;
       }
@@ -24,15 +22,20 @@
       * Container    */
       #container {
 
-        height:100vh;
+       height: auto;
+       width: auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: row;
       }
 
       #map{
-          height: 50vh;
-          width: 40vw;
+          height: 35vh;
+          width: 25vw;
           background-color: aliceblue;
+      }
+
+      .contact_form{
+        padding: 0;
       }
