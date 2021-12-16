@@ -1,15 +1,15 @@
-;(function($){
-	function init(form,o){
-		var name=$('.name>input',form)
-			,email=$('.email>input',form)
-			,submit=$('a[data-type="submit"]',form)
-			,msg_success=$('.success',form).hide()
-			,bl,vl
+// ;(function($){
+// 	function init(form,o){
+// 		var name=$('.name>input',form)
+// 			,email=$('.email>input',form)
+// 			,submit=$('a[data-type="submit"]',form)
+// 			,msg_success=$('.success',form).hide()
+// 			,bl,vl
 			
-		o=$.extend({
-			ownerEmail:'#'
-			,mailHandlerURL:'bat/MailHandler-sub.php'
-		},o)
+// 		o=$.extend({
+// 			ownerEmail:'#'
+// 			,mailHandlerURL:'bat/MailHandler-sub.php'
+// 		},o)
 		
 		submit.click(function(){
 			vl=true
@@ -94,7 +94,7 @@
 				}
 			})
 		}		
-	}	
+	// }	
 
 	$.fn.sForm=function(o){
 		return this.each(function(){
@@ -102,7 +102,7 @@
 		})
 	}
 	
-})(jQuery)
+// })(jQuery)
 $(window).load(function(){
 	$('#newsletter').sForm({			
 		ownerEmail:'#'

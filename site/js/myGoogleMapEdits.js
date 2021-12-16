@@ -29,10 +29,7 @@ function initMap() {
 
     })
 
-    marker.addListener('click', (googleMapsEvent) => {
-        document.getElementById('info').innerHTML = 'Latitude: ' + googleMapsEvent.latLng.lat() + ' Longitude: ' + googleMapsEvent.latLng.lng();
-
-    })
+   
 
     const infoWiwndowOptionsContent = '<h5>When you drag me to a location click me to find the coordinates!</h5>';
     const infoWindowOptions = {
@@ -47,7 +44,10 @@ function initMap() {
 
     const infoWindow = new google.maps.InfoWindow(infoWindowOptions)
 
+    marker.addListener('click', (googleMapsEvent) => {
+       document.getElementsByClassName("position")[0].value =  ("Latitude:  " + googleMapsEvent.latLng.lat().toString() +  " Longitude: " + googleMapsEvent.latLng.lng().toString());
 
+    })
 
     const infoWindowOpenOptions = {
         map: map,

@@ -53,4 +53,9 @@
       
       .dropdown:hover .dropdown-content {
         display: block;
+      } 
+
+      button{
+        margin-right: 20px;
+        position: relative;
       }

@@ -1,8 +1,8 @@
 <?php
 
 	//SMTP server settings	
-	$host = "smtp.host.com";
-    $port = "587";
+	$host = "http://127.0.0.1:5500/site/index-4.html";
+    $port = "5500";
     $username = "";
     $password = "";
 	
