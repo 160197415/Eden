@@ -1,0 +1,61 @@
+/** Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+      
+      .brand {
+        /* position: absolute; */
+        left: 50%;
+        margin-left: -50px !important;
+        display: block;
+        background-color: aquamarine;
+    }
+
+      /** Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /**
+      * Container    */
+      #container {
+
+       height: auto;
+       width: auto;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      #map{
+          height: 35vh;
+          width: 25vw;
+          background-color: aliceblue;
+      }
+      /*The dropbox in index 4*/
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+      }
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      } 
+
+      button{
+        margin-right: 20px;
+        position: relative;
+      }
