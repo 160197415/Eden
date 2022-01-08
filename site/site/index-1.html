@@ -8,6 +8,7 @@
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/table.css">
+		<link rel="stylesheet" href="css/mapstyle.css">
 	</head>
 	<body id="top">
 <!--==============================header=================================-->
@@ -60,7 +61,9 @@
 				</tbody>
 			</table>
 
-
+			<div id="container">
+				<div id="map"></div>
+				</div>
 		</div>
 		<br>
 		<div class="bottom_block">
@@ -135,6 +138,7 @@
 				<div class="clear"></div>
 			</div>
 		</footer>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqyzzi9TOJqdVT56JoEImOEIMkNygTBHY&callback=initMap" async defer></script>
 		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 	  	<script src="js/tableJS.js"></script>
