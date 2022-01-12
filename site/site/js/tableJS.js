@@ -21,38 +21,35 @@
                     allRecords.forEach(
                         function(currentRecord){
                             var name = currentRecord.val().userName;
-                            var email = currentRecord.val().userEmail;
                             var environmentCoordinates = currentRecord.val().environmentCoordinates;
                             var environmentalConcernType = currentRecord.val().environmentalConcernType;
                             var details = currentRecord.val().details;
-                            addItemsToTable(name,email,environmentCoordinates,environmentalConcernType,details);
+                            addItemsToTable(name,environmentCoordinates,environmentalConcernType,details);
                         }
                     );
                 });
             }
 
             window.onload = selectAllData;
+           
 
             //--Filling out the table ----//
 
-            function addItemsToTable(name,email,enviromentCoordinates,environmentalConcernType,details){
+            function addItemsToTable(name,enviromentCoordinates,environmentalConcernType,details){
                 var tbody = document.getElementById('tbody1');
                 var trow = document.createElement('tr');
                 var td1 = document.createElement('td');
                 var td2 = document.createElement('td');
                 var td3 = document.createElement('td');
                 var td4 = document.createElement('td');
-                var td5 = document.createElement('td');
                 td1.innerHTML = name;
-                td2.innerHTML = email;
-                td3.innerHTML = enviromentCoordinates;
-                td4.innerHTML = environmentalConcernType;
-                td5.innerHTML = details;
+                td2.innerHTML = enviromentCoordinates;
+                td3.innerHTML = environmentalConcernType;
+                td4.innerHTML = details;
                 trow.appendChild(td1);
                 trow.appendChild(td2);
                 trow.appendChild(td3);
                 trow.appendChild(td4);
-                trow.appendChild(td5);
                 tbody.appendChild(trow);
 
             }
@@ -87,7 +84,7 @@
             
                
             
-                const infoWiwndowOptionsContent = '<h5>When you drag me to a location click me to find the coordinates!</h5>';
+              
                 const infoWindowOptions = {
                     content: infoWiwndowOptionsContent,
                     position: { lat: 52.4862, lng: -1.8904 },
@@ -124,35 +121,39 @@
                     infoWindow.close();
                 })
                 let newinfoWindow = new google.maps.InfoWindow();
+
+                // marker.addListener('click', (latLngTableEvent) =>{
+                //     document.getElementById("coordinates")[td].value = 
+                // })
             
-                const locationButton = document.createElement("button");
+                // const locationButton = document.createElement("button");
             
-                locationButton.textContent = "Pan to Current Location";
-                locationButton.classList.add("custom-map-control-button");
-                map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-                locationButton.addEventListener("click", () => {
-                    // Try HTML5 geolocation.
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                            (position) => {
-                                const pos = {
-                                    lat: position.coords.latitude,
-                                    lng: position.coords.longitude,
-                                };
-                                marker.setPosition(pos);
-                                newinfoWindow.setPosition(marker);
+                // locationButton.textContent = "Pan to Current Location";
+                // locationButton.classList.add("custom-map-control-button");
+                // map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+                // locationButton.addEventListener("click", () => {
+                //     // Try HTML5 geolocation.
+                //     if (navigator.geolocation) {
+                //         navigator.geolocation.getCurrentPosition(
+                //             (position) => {
+                //                 const pos = {
+                //                     lat: position.coords.latitude,
+                //                     lng: position.coords.longitude,
+                //                 };
+                //                 marker.setPosition(pos);
+                //                 newinfoWindow.setPosition(marker);
             
-                                newinfoWindow.setContent("Location found. Click to find your Latitude and Longitudinal Position");
-                                newinfoWindow.open(map);
-                                map.setCenter(pos);
-                            },
-                            () => {
-                                handleLocationError(true, newinfoWindow, map.getCenter());
-                            }
-                        );
-                    } else {
-                        // Browser doesn't support Geolocation
-                        handleLocationError(false, newinfoWindow, map.getCenter());
-                    }
-                });
+                //                 newinfoWindow.setContent("Location found. Click to find your Latitude and Longitudinal Position");
+                //                 newinfoWindow.open(map);
+                //                 map.setCenter(pos);
+                //             },
+                //             () => {
+                //                 handleLocationError(true, newinfoWindow, map.getCenter());
+                //             }
+                //         );
+                //     } else {
+                //         // Browser doesn't support Geolocation
+                //         handleLocationError(false, newinfoWindow, map.getCenter());
+                //     }
+                // });
             }
